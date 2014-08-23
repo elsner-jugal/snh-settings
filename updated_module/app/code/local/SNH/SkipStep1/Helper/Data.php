@@ -5,4 +5,8 @@ class SNH_SkipStep1_Helper_Data extends Mage_Core_Helper_Data
     {
     	return Mage::getStoreConfig('snh_settings/messages/skipstep1_enabled');
     }
+    public function isShowFax()
+    {
+        return Mage::getStoreConfig('snh_settings/messages/showfax_enabled');
+    }
 }
