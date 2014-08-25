@@ -1,0 +1,5 @@
+# SNH_SETTINGS
+code                   app/code/local/SNH/SkipStep1/
+frontend/layout/      app/design/frontend/base/default/layout/skipstep1.xml
+frontend/template      app/design/frontend/base/default/template/skipstep1/
+My_Module.xml          app/etc/modules/SNH_SkipStep1.xml

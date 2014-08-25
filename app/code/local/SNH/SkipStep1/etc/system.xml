@@ -75,6 +75,16 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </login_link>
+                        <custom_block translate="label comment">
+                            <label>Show Custom Block</label>
+                            <comment>Show a custom block at the top of the billing form</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </custom_block>
                     </fields>                    
                 </messages>
             </groups>

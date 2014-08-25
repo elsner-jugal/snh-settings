@@ -30,6 +30,10 @@
 <?php echo $this->getChildHtml('login') ?>
 <?php // SKIP STEP 1 END ?>
 
+<?php if(Mage::helper('skipstep1')->isShowCustomBlock()): ?>
+<div class="checkout-custom-block"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('checkout-notification')->toHtml(); ?></div>
+<?php endif;?>
+
 <form id="co-billing-form" autocomplete="on" method="post" action="">
 <fieldset>
     <ul class="form-list">

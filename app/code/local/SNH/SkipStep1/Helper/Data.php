@@ -9,4 +9,8 @@ class SNH_SkipStep1_Helper_Data extends Mage_Core_Helper_Data
     {
         return Mage::getStoreConfig('snh_settings/messages/showfax_enabled');
     }
+    public function isShowCustomBlock()
+    {
+        return Mage::getStoreConfig('snh_settings/messages/custom_block');
+    }
 }
