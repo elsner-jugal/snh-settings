@@ -1,6 +1,6 @@
 <?php
 
-class SNH_CategoryParentUrl_Catalog_Model_Product_Url extends Mage_Catalog_Model_Url
+class SNH_CategoryParentUrl_Model_Url extends Mage_Catalog_Model_Url
 {
 
 	/**
