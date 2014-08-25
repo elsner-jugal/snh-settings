@@ -1,8 +1,0 @@
-<checkout_onepage_index>
-	<action method=”unsetChild” ifconfig="snh_settings/messages/removeheaders_enabled">
-		<name>header</name>
-	</action>
-	<action method=”unsetChild” ifconfig="snh_settings/messages/removeheaders_enabled">
-		<name>footer</name>
-	</action>
-</checkout_onepage_index> 
