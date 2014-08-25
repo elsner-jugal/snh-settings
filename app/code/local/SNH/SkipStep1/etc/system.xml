@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<config>
+     
+    <sections>
+        <snh_settings translate="label" module="core">
+            <label>SNH Settings</label>
+            <tab>general</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>9999</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <messages translate="label">
+                    <label>SNH Checkout Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>  
+                    <fields>
+                         <showfax_enabled translate="label">
+                            <label>Show Fax Number</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </showfax_enabled>
+                        <skipstep1_enabled translate="label">
+                            <label>Skip Step 1</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </skipstep1_enabled>
+                        <default_method translate="label">
+                            <label>Default Checkout Method</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>skipstep1/system_config_source_checkout_method</source_model>
+                            <depends>
+                                <skipstep1_enabled>1</skipstep1_enabled>
+                            </depends>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </default_method>
+                        <plugandplay translate="label comment">
+                            <label>Plug and Play</label>
+                            <comment>Plug and play mode will auto-replace the billing template. If disabled, you have to update billing.phtml manually.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <depends>
+                                <skipstep1_enabled>1</skipstep1_enabled>
+                            </depends>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </plugandplay>
+                        <login_link translate="label comment">
+                            <label>Login Link</label>
+                            <comment>Show a login link at the top of the billing form</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <depends>
+                                <skipstep1_enabled>1</skipstep1_enabled>
+                            </depends>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </login_link>
+                    </fields>                    
+                </messages>
+            </groups>
+        </snh_settings>
+    </sections>
+</config>
+
