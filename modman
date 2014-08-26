@@ -1,6 +1,6 @@
 # SNH Settings
 app/code/local/SNH/*                                      app/code/local/SNH/
-pp/etc/modules/*                                          pp/etc/modules/
+app/etc/modules/*                                          app/etc/modules/
 app/design/frontend/base/default/layout/*                 app/design/frontend/base/default/layout/
 app/design/frontend/base/default/template/ajaxcoupon/*    app/design/frontend/base/default/template/ajaxcoupon/
 app/design/frontend/base/default/template/skipstep1/*     app/design/frontend/base/default/template/skipstep1/
