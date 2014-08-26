@@ -1,5 +1,5 @@
 # SNH Settings
-app/code/local/SNH/*                        app/code/local/SNH
-app/design/frontend/base/default/layout/*   app/design/frontend/base/default/layout
-app/etc/modules/*                           app/etc/modules
-app/locale/*                                app/locale
+app/code/local/SNH/*                        app/code/local/SNH/
+app/design/frontend/base/default/layout/*   app/design/frontend/base/default/layout/
+app/etc/modules/*                           app/etc/modules/
+app/locale/*                                app/locale/
