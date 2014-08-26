@@ -21,6 +21,7 @@
                     <fields>
                          <showfax_enabled translate="label">
                             <label>Show Fax Number</label>
+                            <comment>Show fax number field in checkout form yes or no.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
                             <sort_order>4</sort_order>
@@ -30,6 +31,7 @@
                         </showfax_enabled>
                         <skipstep1_enabled translate="label">
                             <label>Skip Step 1</label>
+                            <comment>Removes step 1 (login) from the checkout steps. Enable is remove first step.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_enabledisable</source_model>
                             <sort_order>6</sort_order>
@@ -39,6 +41,7 @@
                         </skipstep1_enabled>
                         <default_method translate="label">
                             <label>Default Checkout Method</label>
+                            <comment>Select the pre-set checkout method afte the firs step is skipped.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>skipstep1/system_config_source_checkout_method</source_model>
                             <depends>
@@ -77,7 +80,7 @@
                         </login_link>
                         <custom_block translate="label comment">
                             <label>Show Custom Block</label>
-                            <comment>Show a custom block at the top of the billing form</comment>
+                            <comment>Show a custom block at the top of the billing form. Block name should be <checkout-notification>.</comment>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
                             <sort_order>10</sort_order>
