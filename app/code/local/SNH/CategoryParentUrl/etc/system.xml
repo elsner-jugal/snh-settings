@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <config>
     <sections>
-        <catalog translate="label" module="categoryparenturl">
+        <catalog translate="label" module="catalog">
             <groups>
-				<seo translate="label">
+                <seo translate="label">
                     <fields>
                         <category_use_parentcategory translate="label">
                             <label>Use Parent Category Path for Category URLs</label>
@@ -16,8 +16,8 @@
                             <show_in_store>1</show_in_store>
                         </category_use_parentcategory>
                     </fields>
-				</seo>
-			</groups>
-        </sales>
+                </seo>
+            </groups>
+        </catalog>
     </sections>
 </config>

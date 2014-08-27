@@ -1,8 +1,9 @@
 <?php if(!$this->isCustomerLoggedIn() && $this->helper('skipstep1')->isSkipEnabled()): ?>
+<div id="onepagecheckout_loginbox">
+<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
 <p id="billing-login-link"><a href="#" onclick="toggleLogin();return false;"><?php echo $this->__('Already registered? Login here') ?></a></p>
 <p id="billing-guest-link" style="display: none"><?php echo $this->__('Please login here or') ?> <a href="#" onclick="toggleLogin();return false;"><?php echo $this->__('go back') ?></a></p>
 <form id="login-form" action="<?php echo $this->getPostAction() ?>" method="post" style="display: none">
-<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
 <?php echo $this->getBlockHtml('formkey'); ?>
 <fieldset>
     <ul class="form-list">
@@ -26,12 +27,12 @@
     </ul>
 	<div class="buttons-set">
 		<p class="required"><?php echo $this->__('* Required Fields') ?></p>
-		<a href="<?php echo $this->getUrl('customer/account/forgotpassword') ?>" class="f-left"><?php echo $this->__('Forgot your password?') ?></a>
+		<a href="javascript:void(0);" class="f-left onepagecheckout_forgotlink" onclick="open_forgot();"><?php echo $this->__('Forgot your password?') ?></a>
 		<button type="submit" class="button" onclick="onepageLogin(this)"><span><span><?php echo $this->__('Login') ?></span></span></button>
 	</div>
 </fieldset>    
 </form>
-
+</div>
 <script type="text/javascript">
 //<![CDATA[
     var loginForm = new VarienForm('login-form', true);

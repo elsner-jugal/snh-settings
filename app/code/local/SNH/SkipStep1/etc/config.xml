@@ -28,6 +28,15 @@
         </blocks>
     </global>
     <frontend>
+        <routers>
+            <skipstep1>
+                <use>standard</use>
+                <args>
+                    <module>SNH_SkipStep1</module>
+                    <frontName>skipstep1</frontName>
+                </args>
+            </skipstep1>
+        </routers>
         <translate>
             <modules>
                 <SNH_SkipStep1>
@@ -63,6 +72,8 @@
                 <default_method>guest</default_method>
                 <plugandplay>1</plugandplay>
                 <login_link>1</login_link>
+                <custom_block>0</custom_block>
+                <custom_validation>1</custom_validation>
             </messages>
         </snh_settings>
     </default>

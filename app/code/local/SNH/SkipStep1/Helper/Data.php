@@ -13,4 +13,8 @@ class SNH_SkipStep1_Helper_Data extends Mage_Core_Helper_Data
     {
         return Mage::getStoreConfig('snh_settings/messages/custom_block');
     }
+    public function isCustomValidation()
+    {
+        return Mage::getStoreConfig('snh_settings/messages/custom_validation');
+    }
 }

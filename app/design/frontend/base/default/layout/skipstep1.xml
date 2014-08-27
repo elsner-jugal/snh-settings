@@ -2,13 +2,20 @@
 <layout version="0.1.0">
     
 <checkout_onepage_index>
+    <reference name="head">
+        <action method="addJs" ifconfig="snh_settings/messages/custom_validation"><script>snh-settings/jquery-1.9.1.min.js</script></action>
+        <action method="addJs" ifconfig="snh_settings/messages/custom_validation"><script>snh-settings/jquerynoconflict.js</script></action>
+        <!--<action method="addJs"><script>snh-settings/jquery.validate.js</script></action>
+        <action method="addJs"><script>snh-settings/additional-methods.js</script></action>-->
+    </reference>
     <reference name="content">
             <block type="core/template" name="checkout.onepage.skipstep1" template="skipstep1/skip.phtml"/>
     </reference>
     <reference name="checkout.onepage.billing">
 	<action method="setTemplate" ifconfig="snh_settings/messages/plugandplay"><template>skipstep1/billing.phtml</template></action>
 	<block type="checkout/onepage_login" name="checkout.onepage.billing.login" as="login" template="skipstep1/login.phtml" />
-	<block type="persistent/form_remember" name="persistent.remember.me" template="persistent/remember_me.phtml" />
+	<block type="customer/account_forgotpassword" name="customer.forgot" template="skipstep1/forgotpassword.phtml"/>
+        <block type="persistent/form_remember" name="persistent.remember.me" template="persistent/remember_me.phtml" />
 	<block type="core/template" name="persistent.remember.me.tooltip" template="persistent/remember_me_tooltip.phtml" />
     </reference>
 </checkout_onepage_index>

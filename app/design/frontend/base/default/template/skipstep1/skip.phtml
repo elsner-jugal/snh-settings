@@ -32,7 +32,14 @@ function toggleLogin() {
     $('billing-login-link').toggle();
     $('billing-guest-link').toggle();
 }
-
+function return_login() {
+    jQuery('#onepagecheckout_forgotbox').hide();
+    jQuery('#onepagecheckout_loginbox').fadeIn(200);
+}
+function open_forgot() {
+    jQuery('#onepagecheckout_loginbox').hide();
+    jQuery('#onepagecheckout_forgotbox').fadeIn(200);
+}
 <?php if (!Mage::getSingleton('customer/session')->isLoggedIn()): ?>
 checkout.method = '<?php echo Mage::getStoreConfig('snh_settings/messages/default_method') ?>';
 checkout.gotoSection('billing');
