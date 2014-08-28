@@ -31,7 +31,7 @@
 <?php echo $this->getChildHtml('customer.forgot') ?>
 <?php // SKIP STEP 1 END ?>
 
-<form id="co-billing-form" action="">
+<form id="co-billing-form" action="" method="post" autocomplete="on">
     <?php if(Mage::helper('skipstep1')->isShowCustomBlock()): ?>
         <div class="checkout-custom-block"><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('checkout-notification')->toHtml(); ?></div>
     <?php endif;?>
