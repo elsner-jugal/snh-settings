@@ -25,43 +25,7 @@
  */
 /** @var Mage_Checkout_Block_Onepage_Billing $this */
 ?>
-<?php if(Mage::helper('skipstep1')->isCustomValidation()): ?>
-<script type="text/javascript">
-jQuery(document).ready(function() {
-        jQuery.noConflict();
-        
-        //var input_field = jQuery(this).val();
-        jQuery('#co-billing-form select').each(function(x) {
-           addValidateClass(jQuery(this));
-       });
-       
-        // Add check mark symbol after validation field
-        jQuery("#co-billing-form input").change(function(){
-            addValidateClass(jQuery(this));
-        });
-        
-        jQuery("#co-billing-form select").change(function(){
-            addValidateClass(jQuery(this));
-        });
-        
-        function addValidateClass(x) {
-            var classes = x.attr('class');
-            classes = classes.split(' ');
-            for(i=0; i<classes.length; i++)
-            {
-                x.next('span.valid-fail').remove();
-                x.next('span.valid-pass').remove();
-                if(classes[i] == 'validation-failed'){
-                    x.after('<span class="valid-fail"></span>');
-                }
-                else if(classes[i] == 'validation-passed') {
-                    x.after('<span class="valid-pass"></span>');
-                }
-            }
-        }
-});
-</script>
-<?php endif; ?>
+
 <?php // SKIP STEP 1 START ?>
 <?php echo $this->getChildHtml('login') ?>
 <?php echo $this->getChildHtml('customer.forgot') ?>
@@ -315,26 +279,18 @@ $('billing:telephone').observe('change', function(e){
 });
 </script>
 <style>
- .co-billing-form .input-box {
-     position: relative;
- }
-.input-box span.valid-pass {
-    background:url('<?php echo $this->getSkinUrl('images/validation-passed.png');?>') no-repeat right center #fff !important;
-    //border: 1px solid #01b3f9 !important;
-    height: 21px;
-    position: absolute;
-    width: 21px;
-    margin-left: -22px;
-    z-index: 9999;
+.input-box input.validation-passed {
+    background:url('<?php echo $this->getSkinUrl('images/validation-passed.png');?>') no-repeat center right #fff !important;
 }
-.input-box span.valid-fail {
-    background:url('<?php echo $this->getSkinUrl('images/validation-failed.png');?>') no-repeat right center #fff !important;
-    //border: 1px solid #eb340a !important;
-    height: 21px;
-    position: absolute;
-    width: 21px;
-    margin-left: -22px;
-    z-index: 9999;
+.input-box input.validation-failed{
+    background:url('<?php echo $this->getSkinUrl('images/validation-failed.png');?>') no-repeat center right #fff !important;
+
 }
-</style>
+.input-box select.validation-passed {
+    background:url('<?php echo $this->getSkinUrl('images/validation-passed.png');?>') no-repeat 94%  center #fff !important;
+}
+.input-box select.validation-failed {
+    background:url('<?php echo $this->getSkinUrl('images/validation-failed.png');?>') no-repeat  94%  center #fff !important;
+
+}
 <?php endif; ?>

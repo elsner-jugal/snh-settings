@@ -1,0 +1,12 @@
+- local.css (line 226) comment below code.
+
+.buttons-set button.button {
+    float: left;
+}
+
+- local.css (line 227) comment below code.
+
+.buttons-set .back-link {
+    float: right;
+}
+
